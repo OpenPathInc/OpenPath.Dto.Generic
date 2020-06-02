@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OP-GenericDto</name>
+    </assembly>
+    <members>
+        <member name="T:OpenPath.Dto.Generic.Enumerator.CardNetworkEnumerator">
+            <summary>
+            A list of known network payment card types.
+            </summary>
+        </member>
+        <member name="T:OpenPath.Dto.Generic.Extension.CardNetworkExtension">
+            <summary>
+            An extension class for converting card networks to enumerators and to human readable text.
+            </summary>
+        </member>
+        <member name="M:OpenPath.Dto.Generic.Extension.CardNetworkExtension.ToCardNetworkEnumerator(System.String)">
+            <summary>
+            Converts the network name in a string to an enumerator. For example: Amex would be
+            converted to CardNetworkEnumerator.AmericanExpress.
+            </summary>
+            <param name="network">The name of the network.</param>
+            <returns>The card network enumerator.</returns>
+        </member>
+        <member name="M:OpenPath.Dto.Generic.Extension.CardNetworkExtension.ToHuman(OpenPath.Dto.Generic.Enumerator.CardNetworkEnumerator)">
+            <summary>
+            Converts a card network enumerator to a human readable title cased string.
+            </summary>
+            <param name="network">The card network enumerator.</param>
+            <returns>Returns a human readble string.</returns>
+        </member>
+        <member name="T:OpenPath.Dto.Generic.Payment.Card">
+            <summary>
+            A generic data object containing the standard data associated to the different types of
+            payment cards.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.Bin">
+            <summary>
+            A bank identification number (BIN) is the initial four to six numbers that appear on a
+            card. The bank identification number uniquely identifies the institution issuing the
+            card. The BIN is key in the process of matching transactions to the issuer of the
+            card. This numbering system applies to charge cards, gift cards, debit cards, prepaid
+            cards, and electronic benefit cards.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.Number">
+            <summary>
+            A card number is usually 15-16 digits long, but it could be as many as 19 digits or as
+            few as 13 in some cases. Each of these individual credit card numbers has meaning.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.ExpirationMonth">
+            <summary>
+            A card expiration month tells you when the card is no longer valid along with the
+            expiration year. After a card expires, it shouldn't be usable, because the issuers
+            should deactivate the card when it reaches the expiration date.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.ExpirationYear4Digit">
+            <summary>
+            A card expiration year tells you when the card is no longer valid along with the
+            month year. After a card expires, it shouldn't be usable, because the issuers
+            should deactivate the card when it reaches the expiration date.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.NameOnCard">
+            <summary>
+            This is the person authorized to use the card. That person didn’t necessarily open the
+            account, they might simply have permission to spend from the account as an "authorized
+            user."
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.MagneticTrack1">
+            <summary>
+            The first of three megnetic tracks on a card that typically contains encoded 
+            information about the cardholder's account, such as their card number, full name, the
+            card's expiration date and the country code.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.MagneticTrack2">
+            <summary>
+            The second of three megnetic tracks on a card that typically contains encoded 
+            information about the cardholder's account, such as their card number, full name, the
+            card's expiration date and the country code.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.MagneticTrack3">
+            <summary>
+            The third of three megnetic tracks on a card that typically contains any additional
+            encoded information from the issuer.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Payment.Card.Network">
+            <summary>
+            A card network are networks of issuing and acquiring banks through which payment cards
+            of some certain brand are processed.
+            </summary>
+        </member>
+    </members>
+</doc>

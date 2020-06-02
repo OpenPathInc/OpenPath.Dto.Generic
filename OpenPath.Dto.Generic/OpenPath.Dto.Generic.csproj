@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>OP-GenericDto</AssemblyName>
+    <PackageId>OpenPath.Gto.Generic</PackageId>
+    <Authors>Jason Martin</Authors>
+    <Company>OpenPath, Inc.</Company>
+    <Description>A set of generic data objects.</Description>
+    <Copyright>2020</Copyright>
+    <PackageProjectUrl>https://github.com/OpenPathInc/OpenPath.Dto.Generic</PackageProjectUrl>
+    <PackageIcon>openpath.png</PackageIcon>
+    <RepositoryUrl>https://github.com/OpenPathInc/OpenPath.Dto.Generic</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>readme.xml</DocumentationFile>
+    <DocumentationMarkdown>..\readme.md</DocumentationMarkdown>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="OpenPath.Utility.Parser" Version="1.0.3" />
+    <PackageReference Include="Vsxmd" Version="1.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\OpenPath.Utility.Parser\OpenPath.Utility.Parser\openpath.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
