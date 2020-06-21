@@ -1,0 +1,9 @@
+﻿
+UPDATE THE VERSION OF THE PACKAGE
+Update the version in the Project Properties under Package.
+
+PACKAGE THE PROJECT
+dotnet pack --configuration Release
+
+Publish the package using the key you specified in the nuget.config file.
+dotnet nuget push "C:\src\OpenPath.Dto.Generic\OpenPath.Dto.Generic\bin\Release\OpenPath.Dto.Generic.1.1.1.nupkg" --source "github"

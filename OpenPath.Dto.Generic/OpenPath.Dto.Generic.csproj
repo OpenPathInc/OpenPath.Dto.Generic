@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>OP-GenericDto</AssemblyName>
-    <PackageId>OpenPath.Gto.Generic</PackageId>
+    <PackageId>OpenPath.Dto.Generic</PackageId>
     <Authors>Jason Martin</Authors>
     <Company>OpenPath, Inc.</Company>
     <Description>A set of generic data objects.</Description>
@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/OpenPathInc/OpenPath.Dto.Generic</PackageProjectUrl>
     <PackageIcon>openpath.png</PackageIcon>
     <RepositoryUrl>https://github.com/OpenPathInc/OpenPath.Dto.Generic</RepositoryUrl>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -16,6 +16,9 @@ namespace OpenPath.Dto.Generic.Extension {
         /// <returns>The card network enumerator.</returns>
         public static CardNetworkEnumerator ToCardNetworkEnumerator(this string network) {
 
+            // validate
+            if(network == null) return CardNetworkEnumerator.Unknown;
+
             // set the default result
             var result = CardNetworkEnumerator.Unknown;
 
@@ -67,7 +70,7 @@ namespace OpenPath.Dto.Generic.Extension {
             if(cleanedNetwork.Contains("meeza") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.Meeza;
             if(cleanedNetwork.Contains("nets") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.Nets;
             if(cleanedNetwork.Contains("troy") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.Troy;
-            if(cleanedNetwork.Contains("unionpay") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.UnionPay;
+            if(cleanedNetwork.Contains("union") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.UnionPay;
             if(cleanedNetwork.Contains("uatp") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.Uatp;
             if(cleanedNetwork.Contains("vpay") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.VPay;
             if(cleanedNetwork.Contains("verve") && result == CardNetworkEnumerator.Unknown) result = CardNetworkEnumerator.Verve;
@@ -96,18 +99,18 @@ namespace OpenPath.Dto.Generic.Extension {
         /// <returns>Returns a human readble string.</returns>
         public static string ToHuman(this CardNetworkEnumerator network) {
 
-            return network switch {
+            switch(network) {
 
                 // manual conversion of the outliers 
-                CardNetworkEnumerator.BcaCard => "BCA Card",
-                CardNetworkEnumerator.BcCard => "BC Card",
-                CardNetworkEnumerator.EftPos => "EFT POS",
-                CardNetworkEnumerator.enRoute => "enRoute",
-                CardNetworkEnumerator.Uatp => CardNetworkEnumerator.Uatp.ToString().ToUpper(),
-                CardNetworkEnumerator.VPay => "VPay",
+                case CardNetworkEnumerator.BcaCard: return "BCA Card";
+                case CardNetworkEnumerator.BcCard: return "BC Card";
+                case CardNetworkEnumerator.EftPos: return "EFT POS";
+                case CardNetworkEnumerator.enRoute: return "enRoute";
+                case CardNetworkEnumerator.Uatp: return CardNetworkEnumerator.Uatp.ToString().ToUpper();
+                case CardNetworkEnumerator.VPay: return "VPay";
 
                 // auto conversion
-                _ => network.ToString().ToSentenceCase().ToTitleCase(),
+                default: return network.ToString().ToSentenceCase().ToTitleCase();
 
             };
 

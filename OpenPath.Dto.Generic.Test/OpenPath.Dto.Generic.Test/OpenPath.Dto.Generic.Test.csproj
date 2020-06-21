@@ -16,8 +16,4 @@
     <ProjectReference Include="..\..\OpenPath.Dto.Generic\OpenPath.Dto.Generic.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Utility\Translator\" />
-  </ItemGroup>
-
 </Project>

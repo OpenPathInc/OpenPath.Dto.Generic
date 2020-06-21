@@ -17,6 +17,17 @@
 - [CardNetworkExtension](#T-OpenPath-Dto-Generic-Extension-CardNetworkExtension 'OpenPath.Dto.Generic.Extension.CardNetworkExtension')
   - [ToCardNetworkEnumerator(network)](#M-OpenPath-Dto-Generic-Extension-CardNetworkExtension-ToCardNetworkEnumerator-System-String- 'OpenPath.Dto.Generic.Extension.CardNetworkExtension.ToCardNetworkEnumerator(System.String)')
   - [ToHuman(network)](#M-OpenPath-Dto-Generic-Extension-CardNetworkExtension-ToHuman-OpenPath-Dto-Generic-Enumerator-CardNetworkEnumerator- 'OpenPath.Dto.Generic.Extension.CardNetworkExtension.ToHuman(OpenPath.Dto.Generic.Enumerator.CardNetworkEnumerator)')
+- [FilterDto](#T-OpenPath-Dto-Generic-Query-FilterDto 'OpenPath.Dto.Generic.Query.FilterDto')
+  - [EndDate](#P-OpenPath-Dto-Generic-Query-FilterDto-EndDate 'OpenPath.Dto.Generic.Query.FilterDto.EndDate')
+  - [Page](#P-OpenPath-Dto-Generic-Query-FilterDto-Page 'OpenPath.Dto.Generic.Query.FilterDto.Page')
+  - [Return](#P-OpenPath-Dto-Generic-Query-FilterDto-Return 'OpenPath.Dto.Generic.Query.FilterDto.Return')
+  - [SortBy](#P-OpenPath-Dto-Generic-Query-FilterDto-SortBy 'OpenPath.Dto.Generic.Query.FilterDto.SortBy')
+  - [SortItem](#P-OpenPath-Dto-Generic-Query-FilterDto-SortItem 'OpenPath.Dto.Generic.Query.FilterDto.SortItem')
+  - [StartDate](#P-OpenPath-Dto-Generic-Query-FilterDto-StartDate 'OpenPath.Dto.Generic.Query.FilterDto.StartDate')
+- [OrderEnumerator](#T-OpenPath-Dto-Generic-Enumerator-OrderEnumerator 'OpenPath.Dto.Generic.Enumerator.OrderEnumerator')
+  - [Assending](#F-OpenPath-Dto-Generic-Enumerator-OrderEnumerator-Assending 'OpenPath.Dto.Generic.Enumerator.OrderEnumerator.Assending')
+  - [Decending](#F-OpenPath-Dto-Generic-Enumerator-OrderEnumerator-Decending 'OpenPath.Dto.Generic.Enumerator.OrderEnumerator.Decending')
+  - [None](#F-OpenPath-Dto-Generic-Enumerator-OrderEnumerator-None 'OpenPath.Dto.Generic.Enumerator.OrderEnumerator.None')
 
 <a name='T-OpenPath-Dto-Generic-Payment-Card'></a>
 ## Card `type`
@@ -166,3 +177,88 @@ Returns a human readble string.
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | network | [OpenPath.Dto.Generic.Enumerator.CardNetworkEnumerator](#T-OpenPath-Dto-Generic-Enumerator-CardNetworkEnumerator 'OpenPath.Dto.Generic.Enumerator.CardNetworkEnumerator') | The card network enumerator. |
+
+<a name='T-OpenPath-Dto-Generic-Query-FilterDto'></a>
+## FilterDto `type`
+
+##### Namespace
+
+OpenPath.Dto.Generic.Query
+
+##### Summary
+
+A generic data object to set the standard filters for a data query
+
+<a name='P-OpenPath-Dto-Generic-Query-FilterDto-EndDate'></a>
+### EndDate `property`
+
+##### Summary
+
+The date this filter should end at.
+
+<a name='P-OpenPath-Dto-Generic-Query-FilterDto-Page'></a>
+### Page `property`
+
+##### Summary
+
+The page of data to return based on the Return value.
+
+<a name='P-OpenPath-Dto-Generic-Query-FilterDto-Return'></a>
+### Return `property`
+
+##### Summary
+
+The amount of results that should be returned per page.
+
+<a name='P-OpenPath-Dto-Generic-Query-FilterDto-SortBy'></a>
+### SortBy `property`
+
+##### Summary
+
+The order to sort the results by.
+
+<a name='P-OpenPath-Dto-Generic-Query-FilterDto-SortItem'></a>
+### SortItem `property`
+
+##### Summary
+
+The item (column) we should sort by.
+
+<a name='P-OpenPath-Dto-Generic-Query-FilterDto-StartDate'></a>
+### StartDate `property`
+
+##### Summary
+
+The date this filter should start at.
+
+<a name='T-OpenPath-Dto-Generic-Enumerator-OrderEnumerator'></a>
+## OrderEnumerator `type`
+
+##### Namespace
+
+OpenPath.Dto.Generic.Enumerator
+
+##### Summary
+
+Enumberators for sorting orders
+
+<a name='F-OpenPath-Dto-Generic-Enumerator-OrderEnumerator-Assending'></a>
+### Assending `constants`
+
+##### Summary
+
+Sort in assending order.
+
+<a name='F-OpenPath-Dto-Generic-Enumerator-OrderEnumerator-Decending'></a>
+### Decending `constants`
+
+##### Summary
+
+Sort in decending order.
+
+<a name='F-OpenPath-Dto-Generic-Enumerator-OrderEnumerator-None'></a>
+### None `constants`
+
+##### Summary
+
+No sorting order.

@@ -9,6 +9,26 @@
             A list of known network payment card types.
             </summary>
         </member>
+        <member name="T:OpenPath.Dto.Generic.Enumerator.OrderEnumerator">
+            <summary>
+            Enumberators for sorting orders
+            </summary>
+        </member>
+        <member name="F:OpenPath.Dto.Generic.Enumerator.OrderEnumerator.Assending">
+            <summary>
+            Sort in assending order.
+            </summary>
+        </member>
+        <member name="F:OpenPath.Dto.Generic.Enumerator.OrderEnumerator.Decending">
+            <summary>
+            Sort in decending order.
+            </summary>
+        </member>
+        <member name="F:OpenPath.Dto.Generic.Enumerator.OrderEnumerator.None">
+            <summary>
+            No sorting order.
+            </summary>
+        </member>
         <member name="T:OpenPath.Dto.Generic.Extension.CardNetworkExtension">
             <summary>
             An extension class for converting card networks to enumerators and to human readable text.
@@ -95,6 +115,41 @@
             <summary>
             A card network are networks of issuing and acquiring banks through which payment cards
             of some certain brand are processed.
+            </summary>
+        </member>
+        <member name="T:OpenPath.Dto.Generic.Query.FilterDto">
+            <summary>
+            A generic data object to set the standard filters for a data query
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Query.FilterDto.StartDate">
+            <summary>
+            The date this filter should start at.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Query.FilterDto.EndDate">
+            <summary>
+            The date this filter should end at.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Query.FilterDto.Return">
+            <summary>
+            The amount of results that should be returned per page.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Query.FilterDto.Page">
+            <summary>
+            The page of data to return based on the Return value.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Query.FilterDto.SortBy">
+            <summary>
+            The order to sort the results by.
+            </summary>
+        </member>
+        <member name="P:OpenPath.Dto.Generic.Query.FilterDto.SortItem">
+            <summary>
+            The item (column) we should sort by.
             </summary>
         </member>
     </members>
